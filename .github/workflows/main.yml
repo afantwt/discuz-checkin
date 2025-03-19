@@ -1,0 +1,30 @@
+name: 网站自动签到
+
+on:
+  schedule:
+    # 北京时间凌晨2点
+    - cron: '10 18 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v2
+      
+    - name: 设置Python环境
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+        
+    - name: 安装依赖
+      run: pip install requests
+      
+    - name: 运行签到脚本
+      env:
+        COOKIE: ${{ secrets.COOKIE }}
+        FORMHASH: ${{ secrets.FORMHASH }}
+        WEBSITE: ${{ secrets.WEBSITE }}
+      run: python checkin.py 

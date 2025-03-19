@@ -9,7 +9,7 @@
 2. 在你的仓库中设置以下Secrets:
    - COOKIE: 你的网站cookie（必需）
    - FORMHASH: 你的formhash值（必需）
-   - WEBSITE: 网站域名
+   - WEBSITE: 网站域名（必需）
 
    设置路径: 仓库 -> Settings -> Secrets and variables -> Actions -> New repository secret
 
@@ -40,12 +40,12 @@
    # Linux/Mac
    export COOKIE="你的cookie"
    export FORMHASH="你的formhash"
-   export WEBSITE="网站域名"  # 可选
+   export WEBSITE="网站域名"
    
    # Windows (CMD)
    set COOKIE=你的cookie
    set FORMHASH=你的formhash
-   set WEBSITE=网站域名  # 可选
+   set WEBSITE=网站域名
    ```
 
 4. 运行脚本:

@@ -8,7 +8,7 @@ def checkin():
     formhash = os.environ.get('FORMHASH')
     
     # 从环境变量获取网站地址
-    website = os.environ.get('WEBSITE', 'www.gamemale.com')
+    website = os.environ.get('WEBSITE')
     
     # 处理网站地址，移除可能的http://或https://前缀和尾部斜杠
   

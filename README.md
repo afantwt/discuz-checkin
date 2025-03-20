@@ -26,8 +26,8 @@
 
 1. 克隆仓库:
    ```
-   git clone [仓库URL]
-   cd [仓库名]
+   git clone https://github.com/afantwt/discuz-checkin.git
+   cd discuz-checkin
    ```
 
 2. 安装依赖:
